@@ -1,0 +1,17 @@
+{
+  "name": "ko-phyo/project",
+  "autoload": {
+    "psr-4": {
+      "KoPhyo\\Project\\": "src/",
+      "Libs\\": "_classes/Libs/",
+      "Helpers\\": "_classes/Helpers/"
+    }
+  },
+  "authors": [
+    {
+      "name": "thihaswe-work",
+      "email": "thihaswe.work@gmail.com"
+    }
+  ],
+  "require": {}
+}
