@@ -1,8 +1,11 @@
 <?php 
+
 namespace Libs\Database;
 
 use PDO;
 use PDOException;
+
+
 
 class MySQL
 {
@@ -13,12 +16,16 @@ class MySQL
     private $db;
     
     
-    public function __construct(  $dbhost,$dbuser,$dbname,$dbpass,$db) {
+    public function __construct(
+        $dbhost = "localhost",
+        $dbuser = "root",
+        $dbname = "project",
+        $dbpass = "",) {
         $this->dbhost = $dbhost;
         $this->dbuser = $dbuser;
         $this->dbname = $dbname;
         $this->dbpass = $dbpass;
-        $this->db = null;
+        $this->db = null;   
     }
 
     public function connect (){
@@ -29,7 +36,8 @@ class MySQL
             ]);
             return $this->db;
         }catch(PDOException $e){
-                return $e->getMessage();
+            
+        return $e->getMessage();
         };
      
     }
