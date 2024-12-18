@@ -40,7 +40,7 @@ class UsersTable{
             ":password"=>$password
         ]);
 
-        $row = $statement->fetch();
+        $row = $statement->fetch(); 
          return $row ?? false;
 
     }
